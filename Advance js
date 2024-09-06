@@ -1,0 +1,78 @@
+//call back example
+// function ab(para){
+//     para();
+// }
+// function a(){
+//     console.log("hello");
+// }
+// ab(a);
+
+// function data(email){
+//     setTimeout(() => {
+//         console.log(email);
+        
+//     },3000)
+// }
+
+// let user = data("hello@gmail.com")
+// console.log(user);  //here cause and undefined situation.
+
+// function data(email, callback){
+//     setTimeout(() => {
+//         callback(email); //here prints the mail again.
+        
+//     },3000)
+// }
+
+// let user = data("hello@gmail.com", (id) => {
+//     console.log(id); 
+// })
+
+// //promise
+// let data = false;
+// let db = new Promise ((resolve, reject) => {
+//     if(data){
+//         resolve(console.log("Data found"));
+//     }
+//     else{
+//         reject(console.log("Not found"));
+//     }
+// }).then(() => console.log("Data take")).catch(()=> console.log("data base not found") //it works when error caught
+// ).finally(() => console.log("Finished") //finally() works in all condition
+// );
+
+// PlusOne    //LC
+// var plusOne = function(digits) {
+//     let a = Number(digits.join("")) + 1
+//     let c = String(a).split("").map(x => Number(x))
+//     console.log(c);
+// };
+// plusOne([1,2,3])
+
+
+//two sum   //LC
+// var twoSum = function(nums, target) {
+//     for(i = 0; i<nums.length; i++){
+//         for(j = i+1; j<nums.length; j++){
+//             if(nums[i] + nums[j] === target){
+//                 return [i,j]
+//             }
+//         }
+//     }
+// };
+// console.log(twoSum([1,2,3],5))
+// console.log(twoSum([3,2,3],6))
+
+//pick the only onetime appear number
+// var singleNumber = function(nums) {    
+//     let a =[]
+//     for(i = 0; i<nums.length; i++){
+//         if (nums.indexOf(nums[i]) === nums.lastIndexOf(nums[i])){
+//             a.push(nums[i])
+//         }
+//     }return a
+// };
+// console.log(singleNumber([4,4,2,1,2,5]));
+
+
+
